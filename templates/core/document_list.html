@@ -1,5 +1,9 @@
+{% extends "core/base.html" %}
 {% load core_tags %}
 
-Foo
-
+{% block content %}
+{% for d in document_list %}
+  {{ d.name }}<br/>
+{% endfor %}
 {% render_tags %}
+{% endblock %}
