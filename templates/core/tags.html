@@ -1,0 +1,26 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+  var tagTree = {{ tags|safe }}
+
+  function parseNodes(nodes) { 
+      var ul = $('<ul>');
+      for(var i=0; i<nodes.length; i++) {
+          ul.append(parseNode(nodes[i]));
+      }
+      return ul;
+  }
+
+  function parseNode(node) {
+      var li = $('<li>');
+      $(li).text(node.name);
+      if(node.children) li.append(parseNodes(node.children));
+      return li;
+  }
+
+  $(document).ready(function(){
+    $('#tagTree').html(parseNodes(tagTree));
+  });
+
+</script>
+<div id="tagTree">
+</div>

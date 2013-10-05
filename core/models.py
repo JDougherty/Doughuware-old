@@ -6,6 +6,15 @@ class Tag(models.Model):
     description = models.CharField(max_length=100, blank=True)
     parent = models.ForeignKey('self', blank=True, null=True)
 
+    def children(self):
+        return Tag.objects.filter(parent=self.pk)
+
+    def serializable_object(self):
+        obj = {'name': self.name, 'children': []}
+        for child in self.children():
+            obj['children'].append(child.serializable_object())
+        return obj
+
 
 class Document(models.Model):
     name = models.CharField(max_length=50)
