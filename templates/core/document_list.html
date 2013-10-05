@@ -1,9 +1,7 @@
 {% extends "core/base.html" %}
-{% load core_tags %}
-
 {% block content %}
 {% for d in document_list %}
+  <img src="{{d.thumbnail}}"><br/>
   {{ d.name }}<br/>
 {% endfor %}
-{% render_tags %}
 {% endblock %}

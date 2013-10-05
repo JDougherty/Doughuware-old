@@ -1,11 +1,51 @@
+{% load core_tags %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        {% block content %}
-        {% endblock %}
-    </body>
+  <head>
+      <link href="/static/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+      <style type="text/css">
+        body { padding-top: 60px; }
+      </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Doughuware</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/create">Add Document</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          {% render_tags %}
+        </div>
+        <div class="col-lg-8">
+          {% block content %}{% endblock %}
+       </div>
+        
+      </div>
+
+      <hr>
+
+      <footer>
+        <p> Company 2013</p>
+      </footer>
+    </div>
+  <script src="static/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
 </html>         
 
