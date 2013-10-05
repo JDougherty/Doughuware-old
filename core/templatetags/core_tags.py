@@ -11,4 +11,4 @@ def render_tags(**kwargs):
     for t in Tag.objects.filter(parent=None):
         tags.append(t.serializable_object())
     tags = simplejson.dumps(tags)
-    return {"tags":tags}
+    return {"tags": tags}

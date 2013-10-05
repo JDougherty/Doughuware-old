@@ -5,8 +5,8 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 
-
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     # Examples:
     url(r'^$', include('core.urls')),
 
