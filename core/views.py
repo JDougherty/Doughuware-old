@@ -6,7 +6,7 @@ from vanilla import CreateView, DeleteView, ListView, UpdateView, DetailView
 
 class ListDocuments(ListView):
     model = Document
-    queryset = Document.objects.filter(pk=3)
+    queryset = Document.objects.all()
 
     def get_queryset(self):
         print self.kwargs
