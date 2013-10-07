@@ -4,7 +4,9 @@
     <form enctype="multipart/form-data" method="POST" action="." class="form-horizontal">
 
       {% csrf_token %}
+      <table>
       {{ form }}
+      </table>
     <input type="submit" class="btn btn-primary" value="Save">
     </form>
 {% endblock %}
