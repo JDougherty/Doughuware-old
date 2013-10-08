@@ -13,7 +13,7 @@
   function parseNode(node) {
       var li = $('<li>');
       $(li).text(node.name);
-      if(node.children) li.append(parseNodes(node.children));
+      if(node.children.length) li.append(parseNodes(node.children));
       return li;
   }
 
