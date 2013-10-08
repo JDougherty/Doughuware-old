@@ -18,9 +18,10 @@
   }
 
   $(document).ready(function(){
-    $('#tagTree').html(parseNodes(tagTree));
+    $('#tagTree').append("<ul class='tree'>" + parseNodes(tagTree).html() + "</ul>");
   });
 
 </script>
-<div class="well" id="tagTree">
+<div class="well" style="font:12pt verdana;" id="tagTree">
+  <h4>Tags</h4>
 </div>

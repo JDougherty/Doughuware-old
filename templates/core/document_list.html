@@ -1,7 +1,10 @@
 {% extends "core/base.html" %}
 {% block content %}
+<table style="width:100%;">
 {% for d in document_list %}
-  <img src="{{d.thumbnail}}"><br/>
-  {{ d.name }}<br/>
+  {% if forloop.counter0|divisibleby:"3" %}<tr>{% endif %}
+  <td style="width:33%;"><img src="{{d.thumbnail}}"><br/>{{ d.name }}<br/></td>
+  {% if forloop.last or forloop.counter|divisibleby:"3" %}</tr>{% endif %}
 {% endfor %}
+</table>
 {% endblock %}
