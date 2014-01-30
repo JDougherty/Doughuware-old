@@ -13,4 +13,5 @@ Doughuware is developed within a virtualenv. It is probably helpful, but not nec
 3) Install non-pip dependencies: 
    * For psycopg2 support: `libpq-dev, python-dev`  
    * For creating document thumbnails and previews: `imagemagick`  
+
 4) Install the Doughuware requirements: `pip install -r requirements.txt`
