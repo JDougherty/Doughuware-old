@@ -10,5 +10,7 @@ Doughuware is developed within a virtualenv. It is probably helpful, but not nec
 
 1) Create a virtualenv with virtualenvwrapper: mkvirtualenv Doughuware  
 2) Clone the git repository  
-3) By default, Doughuware uses the `pscyopg2` Python database adapter. If you intend to use psycopg2 and don't have it installed, you may need to install the following libraries before installing from pip: libpq-dev, python-dev  
-4) Install the Doughuware requirements: `pip install -r requirements.txt`  
+3) Install non-pip dependencies: 
+   * For psycopg2 support: `libpq-dev, python-dev`  
+   * For creating document thumbnails and previews: `imagemagick`  
+4) Install the Doughuware requirements: `pip install -r requirements.txt`
